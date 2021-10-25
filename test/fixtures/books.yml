@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  isbn: MyString
+  publication_date: 2021-10-24
+  num_pages: 1
+  average_listing: 9.99
+  publisher: one
+
+two:
+  title: MyString
+  isbn: MyString
+  publication_date: 2021-10-24
+  num_pages: 1
+  average_listing: 9.99
+  publisher: two
