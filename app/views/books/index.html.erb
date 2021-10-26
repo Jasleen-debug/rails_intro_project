@@ -1,2 +1,6 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h2>Top GoodRead Books</h2>
+<ol>
+<% @books.each do | book | %>
+<li><%= link_to book.title, book %> was published by <%= link_to book.publisher.name, book.publisher %> </li>
+<% end %>
+</ol>
