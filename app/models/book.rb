@@ -4,4 +4,5 @@ class Book < ApplicationRecord
   validates :title, :isbn, uniqueness: true
   validates :num_pages, numericality: { only_integer: true }
   validates :average_listing, numericality: true
+  paginates_per 50
 end
