@@ -15,4 +15,8 @@ class Book < ApplicationRecord
       order("average_listing DESC")
     end
   end
+
+  def authors_list
+    authors.map(&:name).join(", ")
+  end
 end
