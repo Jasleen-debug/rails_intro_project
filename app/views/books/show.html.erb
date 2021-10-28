@@ -3,7 +3,7 @@
 <div class="col p-4">
   <div class="p-4 border bg-light m-4">
     <div class="row gy-3 border p-4 m-2 bg-warning">
-        <div class="col-2 border" with="g-3" gutters><strong>Book Title:</strong></div>
+        <div class="col-2 border"><strong>Book Title:</strong></div>
         <div class="col-10"><%= @book.title %></div>
     </div>
     <div class="row gy-3 border p-4 m-2">
@@ -25,7 +25,7 @@
 
     <div class="row gy-3 border p-4 m-2 bg-warning">
       <div class="col-2 border"><strong>Author:</strong></div>
-      <div class="col-8"><%= book.authors_list %></div>
+      <div class="col-8"><%= @book.authors_list %></div>
     </div>
 
   </div>

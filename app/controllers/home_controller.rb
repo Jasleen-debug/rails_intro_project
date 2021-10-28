@@ -10,6 +10,7 @@ class HomeController < ApplicationController
                            .group("publishers.id")
                            .order("book_count DESC")
                            .limit(10)
+    @authors = Author.limit(10)
   end
 
   def search
