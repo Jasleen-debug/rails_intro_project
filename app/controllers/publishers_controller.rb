@@ -9,5 +9,7 @@ class PublishersController < ApplicationController
                .order("book_count DESC").page params[:page]
   end
 
-  def show; end
+  def show
+    @publisher = Publisher.find(params[:id])
+  end
 end
