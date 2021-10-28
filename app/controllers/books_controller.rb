@@ -8,7 +8,6 @@ class BooksController < ApplicationController
   end
 
   def search
-    word_search = "%#{params[:keywords]}"
-    @books = Book.where("title LIKE?", word_search)
+    @books = Book.search(params[:keywords])
   end
 end

@@ -1,30 +1,33 @@
 <% content_for(:html_title) { @book.title } %>
 
-  <div class="container p-4">
-    <div class="row gy-3">
-      <div class="col-2" with="g-3" gutters>Book Title:</div>
-      <div class="col-10"><%= @book.title %></div>
+<div class="col p-4">
+  <div class="p-4 border bg-light m-4">
+    <div class="row gy-3 border p-4 m-2 bg-warning">
+        <div class="col-2 border" with="g-3" gutters><strong>Book Title:</strong></div>
+        <div class="col-10"><%= @book.title %></div>
     </div>
-    <div class="row gy-3">
-      <div class="col-2">Publication Date:</div>
+    <div class="row gy-3 border p-4 m-2">
+      <div class="col-2 border"><strong>Publication Date:</strong></div>
       <div class="col-4"><%= @book.publication_date %></div>
-      <div class="col-2">ISBN:</div>
+      <div class="col-2 border"><strong>ISBN:</strong></div>
       <div class="col-4"><%= @book.isbn%> </div>
     </div>
-    <div class="row gy-3">
-      <div class="col-2">Total Pages:</div>
+    <div class="row gy-3 border p-4 m-2 bg-warning">
+      <div class="col-2 border"><strong>Total Pages:</strong></div>
       <div class="col-4"><%= @book.num_pages%></div>
-      <div class="col-2">Average Listing:</div>
+      <div class="col-2 border"><strong>Average Listing:</strong></div>
       <div class="col-4"><%= @book.average_listing%></div>
     </div>
-    <div class="row gy-3">
-      <div class="col-2">Publisher:</div>
+    <div class="row gy-3 border p-4 m-2">
+      <div class="col-2 border"><strong>Publisher:</strong></div>
       <div class="col-8"><%= link_to @book.publisher.name, @book.publisher %></div>
     </div>
-    <div class="row gy-3">
-      <div class="col" style="background-color:yellow;">Authors: coming soon...</div>
+
+    <div class="row gy-3 border p-4 m-2 bg-warning">
+      <div class="col-2 border"><strong>Author:</strong></div>
+      <div class="col-8"><%= link_to @book.publisher.name, @book.publisher %></div>
     </div>
+
   </div>
-
-
+</div>
 

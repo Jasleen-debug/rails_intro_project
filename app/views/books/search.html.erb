@@ -1,6 +1,9 @@
-<p>Books Found: <%= pluralize(@books.count, 'Movie')%> for <%= params[:keywords]%></p>
-<ul>
+<h2 class="text-center p-4">Results for: <%= params[:keywords]%></h2>
+<p class="text-center p-4">Your search relates to <%= pluralize(@books.count, 'Book')%> in our eLibrary</p>
+<div class="col p-4">
+<div class="p-3 border bg-light">
+<ul class="list-group">
   <% @books.each do |book| %>
-    <li> <%= link_to book.title, book %></li>
+    <li class="list-group-item list-group-item-info"> <%= link_to book.title, book %></li>
   <% end %>
 </ul>
