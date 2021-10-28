@@ -1,5 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :publisher
+  has_many :book_authors
+  has_many :authors, through: :book_authors
   validates :title, :isbn, :publication_date, :num_pages, :average_listing, presence: true
   validates :title, :isbn, uniqueness: true
   validates :num_pages, numericality: { only_integer: true }
