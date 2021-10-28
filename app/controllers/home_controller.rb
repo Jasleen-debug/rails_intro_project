@@ -11,4 +11,14 @@ class HomeController < ApplicationController
                            .order("book_count DESC")
                            .limit(10)
   end
+
+  def search
+    if params["name"].blank?
+      @books = Book.search(params[:keywords])
+    else
+      publisher = Publisher.find(params["id"]["name"])
+      puts "Created #{publisher} Publishers."
+      @books = publisher.books.search(params[:keywords])
+    end
+  end
 end
