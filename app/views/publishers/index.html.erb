@@ -1,2 +1,11 @@
-<h1>Publishers#index</h1>
-<p>Find me in app/views/publishers/index.html.erb</p>
+<h2 class="text-center p-4"> Top GoodReads Publishers </h2>
+<%= paginate @publishers %>
+<ol class="list-group list-group-numbered p-4">
+  <% @publishers.each do | publisher | %>
+  <li class="list-group-item">
+    <%= link_to publisher.name, publisher %>
+      <em>(<%= publisher.book_count %> Books)</em>
+  </li>
+  <% end %>
+</ol>
+<%= paginate @publishers %>

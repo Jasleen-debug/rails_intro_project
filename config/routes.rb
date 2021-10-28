@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "home#index"
   resources :books, only: %i[index show] do
     collection do
       get "search"
