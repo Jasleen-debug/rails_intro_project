@@ -1,0 +1,10 @@
+<h2 class="text-center p-4"> Top GoodReads Authors </h2>
+<%= paginate @authors %>
+<ol class="list-group list-group-numbered p-4">
+  <% @authors.each do | author | %>
+  <li class="list-group-item">
+    <%= link_to author.name, author %>
+  </li>
+  <% end %>
+</ol>
+<%= paginate @authors %>

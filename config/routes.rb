@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'about_us/index'
+  get 'about/index'
   root to: "home#index"
+  resources :authors, only: %i[index show]
   resources :books, only: %i[index show] do
     collection do
       get "search"

@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.includes(:publisher).all.order("average_listing DESC").page params[:page]
+    @books = Book.includes(:publisher,
+                           :authors).all.order("average_listing DESC").page params[:page]
   end
 
   def show

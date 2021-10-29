@@ -40,7 +40,7 @@
         <ul class="list-group">
           <% @authors.each do | author | %>
         	<li class="list-group-item list-group-item-info">
-          	<%= author.name %>
+          	<%= link_to author.name, author %>
         	</li>
       	<% end %>
         </ul>
