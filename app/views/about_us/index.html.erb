@@ -1,2 +1,26 @@
-<h1>AboutUs#index</h1>
-<p>Find me in app/views/about_us/index.html.erb</p>
+<h2 class="text-center p-4"> About Us </h2>
+<ol class="list-group list-group-numbered p-4">
+  <li class="list-group-item list-group-item-info">
+  We have selected one data source and it is from kaggle at <a href="https://www.kaggle.com/jealousleopard/goodreadsbooks">here </a> .
+  </li>
+  <li class="list-group-item">
+  The dataset is a comprehensive list of books in Goodreads <a href="https://www.goodreads.com/">here </a> .
+  The original data had 12 columns but we modified the csv file a bit to extract the following information about the books with <br> 8 columns: book_id, title, author,
+	average_listing, isbn, num_pages, publication_date, publisher
+  </li>
+  <li class="list-group-item list-group-item-info">
+  We have 4 database tables from this data source namely:<br>
+	1. Books Table: id, title, publication_date, num_pages,average_listing, isbn, :publisher_id<br>
+	2. Publishers Table: id, name<br>
+  3. Authors Table: id, name<br>
+	4. books_authors Table: book_id, author_id - This table breaks many to many connection between books and authors.
+  </li>
+  <li class="list-group-item">
+  Basically, a book is published by one publisher in this dataset and that publisher can in turn publish many books. <br>
+  (One to many association)
+  </li>
+  <li class="list-group-item list-group-item-info">
+  Secondly, a book can be written by many authors (or a group of authors) and an author can write many books. <br>
+  (Many to Many association)
+  </li>
+</ol>

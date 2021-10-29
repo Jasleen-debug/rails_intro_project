@@ -14,11 +14,12 @@
   </head>
 
   <body>
-
-  <div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>My GoodReads eLibrary</h1>
-  <p> Hi there! This library helps you explore different books that we have in-store.</p>
-  </div>
+  <% if controller_name != 'about_us'%>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+    <h1>My GoodReads eLibrary</h1>
+    <p> Hi there! This library helps you explore different books that we have in-store.</p>
+    </div>
+  <% end %>
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="/">HOME</a>
@@ -37,7 +38,7 @@
         <a class="nav-link" href="/authors">Authors</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About us</a>
+        <a class="nav-link" href="about_us/index">About us</a>
       </li>
     </ul>
   </div>
